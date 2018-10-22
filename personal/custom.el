@@ -57,6 +57,7 @@
   (define-key org-mode-map "\C-c\C-g" 'reftex-citation)
   )
 (add-hook 'org-mode-hook 'my-org-mode-setup)
+(add-hook 'org-mode-hook 'turn-on-auto-fill)
 
 
  ;; Integrating BibTeX into my captured books.org file
