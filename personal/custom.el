@@ -1,18 +1,18 @@
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(org-agenda-files (quote ("~/Dropbox/org/organizer.org")))
- '(package-selected-packages
-   (quote
-    (markdown-mode zop-to-char zenburn-theme which-key web-mode volatile-highlights vkill undo-tree smex smartrep smartparens smart-mode-line rainbow-mode rainbow-delimiters ov operate-on-number move-text magit key-chord json-mode js2-mode imenu-anywhere ido-ubiquitous helm-projectile helm-descbinds helm-ag guru-mode grizzl god-mode gitignore-mode gitconfig-mode git-timemachine gist geiser flycheck flx-ido expand-region exec-path-from-shell elisp-slime-nav editorconfig easy-kill discover-my-major diminish diff-hl crux company-auctex company-anaconda cdlatex browse-kill-ring beacon anzu ace-window))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
+;; (custom-set-variables
+;;  ;; custom-set-variables was added by Custom.
+;;  ;; If you edit it by hand, you could mess it up, so be careful.
+;;  ;; Your init file should contain only one such instance.
+;;  ;; If there is more than one, they won't work right.
+;;  '(org-agenda-files (quote ("~/Dropbox/org/organizer.org")))
+;;  '(package-selected-packages
+;;    (quote
+;;     (markdown-mode zop-to-char zenburn-theme which-key web-mode volatile-highlights vkill undo-tree smex smartrep smartparens smart-mode-line rainbow-mode rainbow-delimiters ov operate-on-number move-text magit key-chord json-mode js2-mode imenu-anywhere ido-ubiquitous helm-projectile helm-descbinds helm-ag guru-mode grizzl god-mode gitignore-mode gitconfig-mode git-timemachine gist geiser flycheck flx-ido expand-region exec-path-from-shell elisp-slime-nav editorconfig easy-kill discover-my-major diminish diff-hl crux company-auctex company-anaconda cdlatex browse-kill-ring beacon anzu ace-window))))
+;; (custom-set-faces
+;;  ;; custom-set-faces was added by Custom.v
+;;  ;; If you edit it by hand, you could mess it up, so be careful.
+;;  ;; Your init file should contain only one such instance.
+;;  ;; If there is more than one, they won't work right.
+;;  )
 
  ;; Org setup note different files.
 (setq org-mobile-directory "~/Dropbox/org")
@@ -59,6 +59,7 @@
 (add-hook 'org-mode-hook 'my-org-mode-setup)
 (add-hook 'org-mode-hook 'turn-on-auto-fill)
 
+(auto-fill-mode 1)
 
  ;; Integrating BibTeX into my captured books.org file
 (defun add-bibliographic-data ()
@@ -125,5 +126,11 @@
  ;; For Bibtex
 (setq TeX-PDF-mode t)
 (setq TeX-parse-self t)
+(setq TeX-style-private "~/.emacs.d/personal/mystyles")
+
+
+
+;; Turn on Auto Fill Mode for all text
+(add-hook 'text-mode-hook 'turn-on-auto-fill)
 
 '(provide custom)
