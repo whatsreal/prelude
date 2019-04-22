@@ -14,6 +14,11 @@
 ;;  ;; If there is more than one, they won't work right.
 ;;  )
 
+;; Require Helm everyhwere
+
+(require 'prelude-helm-everywhere)
+
+
  ;; Org setup note different files.
 (setq org-mobile-directory "~/Dropbox/org")
 (setq org-directory "~/Dropbox/org/")
@@ -59,7 +64,7 @@
 (add-hook 'org-mode-hook 'my-org-mode-setup)
 (add-hook 'org-mode-hook 'turn-on-auto-fill)
 
-(auto-fill-mode 1)
+
 
  ;; Integrating BibTeX into my captured books.org file
 (defun add-bibliographic-data ()
@@ -134,3 +139,21 @@
 (add-hook 'text-mode-hook 'turn-on-auto-fill)
 
 '(provide custom)
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   (quote
+    (yaml-mode helm-ag helm-descbinds helm-projectile helm geiser company-anaconda anaconda-mode company-auctex cdlatex auctex json-mode js2-mode rainbow-mode elisp-slime-nav rainbow-delimiters company counsel swiper zop-to-char zenburn-theme which-key volatile-highlights undo-tree super-save smex smartrep smartparens projectile operate-on-number move-text markdown-mode magit ivy imenu-anywhere ido-completing-read+ hl-todo guru-mode gitignore-mode gitconfig-mode git-timemachine gist flycheck flx-ido expand-region exec-path-from-shell editorconfig easy-kill discover-my-major diminish diff-hl crux browse-kill-ring beacon anzu ace-window))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
+
+
+;; add inline todo items
+(require 'org-inlinetask)

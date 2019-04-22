@@ -75,7 +75,7 @@
 
 (defun prelude-latex-mode-defaults ()
   "Default Prelude hook for `LaTeX-mode'."
-  (turn-on-auto-fill)
+  ;; (turn-on-auto-fill) disabled. can't stand it when doing tables in auctex with auto indent
   (abbrev-mode +1)
   (smartparens-mode +1)
   (case prelude-latex-fast-math-entry
